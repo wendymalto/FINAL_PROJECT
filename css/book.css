@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: #574933;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+}
+
+.header .logo {
+    color: #e0ddd7;
+    font-size: 2.3rem;
+}
+
+.header .logo i {
+    padding-left: .5rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.header .btn {
+    margin-top: 0;
+    color: #fff;
+}
+
+#menu-btn {
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* BOOK */
+.book {
+    background: url(image/book-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 120vh;
+    padding-top: 10rem; /* Create space for the heading below the header */
+    position: relative;
+}
+
+.book::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind text */
+}
+
+.heading2 {
+    font-size: 6rem; /* Adjusted for better fit */
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 0.1rem var(--main-color);
+    letter-spacing: .2rem;
+    text-align: center;
+    pointer-events: none;
+    position: relative;
+    z-index: 1; /* Ensure it appears on top */
+}
+
+.heading2 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.book form {
+    margin: 0 auto 2rem auto;
+    max-width: 60rem;
+    border-radius: var(--border-radius-hover);
+    padding: 3rem;
+    border: var(--border);
+    position: relative;
+    z-index: 1; /* Above the background overlay */
+}
+
+.book form .box {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    background: none;
+    text-transform: none;
+    color: var(--main-color);
+    border: var(--border);
+    margin: .7rem 0;
+}
+
+.book form .box:focus {
+    border: var(--border-hover);
+}
+
+.book form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--main-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.footer {
+    background: #574933; /* Dark background for footer */
+    color: #fff; /* Text color for better contrast */
+    padding: 2rem;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box h3 {
+    font-size: 2rem;
+    color:rgb(220, 217, 207);
+    margin-top: 1rem 0;
+}
+
+.footer .box a {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem 0;
+    color:#fff;
+}
+.footer .box a:hover {
+    color: #ff9800; /* Link hover effect */
+    padding-left: 1rem;
+}
+
+.footer .credit {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 2rem;
+
+}
+
+.footer .credit span {
+    color:#fff;
+    border-bottom: 2px solid #f7f6f4; /* Adds a highlight effect */
+    padding-bottom: 0.2rem;
+}
